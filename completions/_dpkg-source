@@ -1,5 +1,8 @@
 # Debian dpkg-source completion                            -*- shell-script -*-
 
+# Use of this file is deprecated.
+# Upstream completion is available in dpkg >= 1.22.2, use that instead.
+
 _comp_cmd_dpkg_source()
 {
     local cur prev words cword comp_args

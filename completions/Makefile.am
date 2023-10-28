@@ -79,6 +79,7 @@ bashcomp_DATA = 2to3 \
 		cvs \
 		cvsps \
 		dd \
+		debconf \
 		declare \
 		deja-dup \
 		desktop-file-validate \
@@ -89,9 +90,9 @@ bashcomp_DATA = 2to3 \
 		dnssec-keygen \
 		dnsspoof \
 		dot \
-		dpkg \
-		dpkg-source \
-		dselect \
+		_dpkg \
+		_dpkg-source \
+		_dselect \
 		dsniff \
 		dumpdb \
 		dumpe2fs \
@@ -585,8 +586,8 @@ CLEANFILES = \
 	_diesel \
 	display \
 	_docker \
-	dpkg-deb \
-	dpkg-query \
+	_dpkg-deb \
+	_dpkg-query \
 	dpkg-reconfigure \
 	_dprint \
 	dropdb \
@@ -955,12 +956,14 @@ symlinks: $(DATA)
 		mogrify montage stream
 	$(ss) cowsay \
 		cowthink
+	$(ss) debconf \
+		dpkg-reconfigure
 	$(ss) declare \
 		typeset
 	$(ss) dict \
 		rdict
-	$(ss) dpkg \
-		dpkg-deb dpkg-query dpkg-reconfigure
+	$(ss) _dpkg \
+		_dpkg-deb _dpkg-query
 	$(ss) ether-wake \
 		etherwake
 	$(ss) filesnarf \
@@ -1194,7 +1197,7 @@ symlinks: $(DATA)
 		bsdtar gtar star
 	$(ss) tracepath \
 		tracepath6
-	$(ss) update-alternatives \
+	$(ss) _update-alternatives \
 		alternatives
 	$(ss) _vault \
 		_consul _nomad _packer _terraform
